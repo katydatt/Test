@@ -50,5 +50,5 @@ class Phone
     @suffix ||= number.slice(6, 4)
   end
 
-  end
+  
 end
