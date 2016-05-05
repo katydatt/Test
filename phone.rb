@@ -26,6 +26,7 @@ class Phone
     #  " a ||= b if a is false, nil or undefined, then evaluate b and set a to the result"
     @area_code ||= number.slice(0, 3)
   end
+      
 
   def to_s
     "(#{area_code}) #{exchange}-#{suffix}"
