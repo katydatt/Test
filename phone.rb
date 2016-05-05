@@ -1,4 +1,3 @@
-#
 # Write a program that cleans up user-entered phone numbers so that they can be sent SMS messages.
 #
 # The rules are as follows:
@@ -12,7 +11,7 @@
 
 
 class Phone
-  # constants used to store a value for the duration of a Ruby program's execution
+
   LENGTH = 10
   BAD_NUMBER = "0000000000"
 
@@ -24,9 +23,9 @@ class Phone
 
   def area_code
     #  " a ||= b if a is false, nil or undefined, then evaluate b and set a to the result"
-    @area_code ||= number.slice(0, 3)
+    @area_code = number.slice(0, 3)
   end
-      
+
 
   def to_s
     "(#{area_code}) #{exchange}-#{suffix}"
@@ -55,11 +54,11 @@ class Phone
   end
 
   def exchange
-    @exchange ||= number.slice(3, 3)
+    @exchange = number.slice(3, 3)
   end
 
   def suffix
-    @suffix ||= number.slice(6, 4)
+    @suffix = number.slice(6, 4)
   end
 
 
